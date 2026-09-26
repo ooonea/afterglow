@@ -1,0 +1,88 @@
+{
+  "animation": {
+    "curve": "easeout",
+    "duration_ms": 200,
+    "enabled": true,
+    "border": {
+      "duration_ms": 133,
+      "enabled": true
+    },
+    "overview": {
+      "curve": "easeout",
+      "duration_ms": 233,
+      "enabled": true
+    },
+    "windows_in": {
+      "curve": "easeout",
+      "duration_ms": 167,
+      "enabled": true,
+      "scale": 0.97,
+      "style": "popin"
+    },
+    "windows_move": {
+      "curve": "easeout",
+      "duration_ms": 200,
+      "enabled": true
+    },
+    "windows_out": {
+      "curve": "easeout",
+      "duration_ms": 133,
+      "enabled": true,
+      "style": "fade"
+    },
+    "workspaces": {
+      "curve": "easeout",
+      "duration_ms": 233,
+      "enabled": true
+    }
+  },
+  "appearance": {
+    "border_width": 2,
+    "corner_radius": 16,
+    "drag_opacity": 0.82,
+    "prefer_no_csd": true,
+    "blur": {
+      "brightness": 0.9,
+      "contrast": 0.92,
+      "enabled": true,
+      "noise": 0.02,
+      "optimized": true,
+      "passes": 3,
+      "radius": 4,
+      "saturation": 1.1
+    },
+    "shadow": {
+      "enabled": true,
+      "offset_x": 0,
+      "offset_y": 6,
+      "softness": 24
+    }
+  },
+  "colors": {
+    "accent_primary": "#F39A8DFF",
+    "accent_secondary": "#9CCBE8FF",
+    "backdrop": "#19263AFF",
+    "background": "#19263AF0",
+    "error": "#FFB0ABFF",
+    "insert_hint": "#9CCBE880",
+    "shadow": "#101A2A90",
+    "text_muted": "#C5CED9FF",
+    "text_primary": "#F5EEE8FF",
+    "warning": "#E9BC89FF",
+    "border": {
+      "focused": "#F39A8DFF",
+      "unfocused": "#2D3B50FF"
+    },
+    "overview": {
+      "background_tint": "#19263A60",
+      "badge": "#F39A8DFF"
+    }
+  },
+  "layout": {
+    "extent_presets": [
+      0.382,
+      0.5,
+      0.618
+    ]
+  }
+}
