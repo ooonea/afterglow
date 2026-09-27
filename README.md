@@ -54,6 +54,7 @@ The updated Noctalia example requires these contributions in addition to 5.1.0:
 - [#4600](https://github.com/noctalia-dev/noctalia/pull/4600): icon saturation (`9f75f32cc`).
 - [#4601](https://github.com/noctalia-dev/noctalia/pull/4601): tinted mask coverage (`7a8c9b435`).
 - [#4603](https://github.com/noctalia-dev/noctalia/pull/4603): alpha-shaped icon shadows, including review and lint corrections (`a2bebdb66`).
+- [#4607](https://github.com/noctalia-dev/noctalia/pull/4607): preserve icon-theme precedence (`04b6f8ff6`), so inherited SVGs or better-sized PNGs do not replace normalized Afterglow icons.
 
 These are submitted contributions, not a promise that stock Noctalia 5.1.0
 supports the new settings. Use a package containing them; #4603 already carries
