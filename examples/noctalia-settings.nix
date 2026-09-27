@@ -30,6 +30,6 @@
     active_scale = 1.0;
     inactive_scale = 1.0;
     magnification_scale = 1.12;
-    background_opacity = 0.90;
+    background_opacity = 0.80;
   };
 }

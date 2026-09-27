@@ -2,8 +2,11 @@
 
 Target: 1920×1080, display scale 1, text/UI scale 1.25, approximately 60 Hz.
 Blue graphite surfaces support coral focus and peach highlights. Terminal
-background opacity is 0.94; dock and bar opacity 0.90. The wallpaper keeps its
+background opacity is 0.94; dock opacity 0.80 and bar opacity 0.90. The wallpaper keeps its
 subject on the right to leave quieter space behind working windows.
+The dock background lets more of the live blurred scene through while icons and
+indicators keep their own opacity. OnSurface text retains a calculated 6.95:1
+contrast over a white backdrop; multicolored logos still need visual review.
 
 The approved composition uses 38.2% / 61.8% divisions. Umbriel window extent
 presets are 0.382, 0.5 and 0.618. Spacing, controls and typography use native
