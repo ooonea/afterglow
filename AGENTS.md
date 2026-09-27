@@ -5,6 +5,8 @@
   manually installed files, runtime mutation scripts or activation-time copying.
 - Preserve official application marks and aspect ratios. Normalize visible alpha
   bounds on a common canvas; use one shared dock surface without individual tiles.
+- The approved custom swayimg icon is the sole exception to official application
+  marks. It is original Afterglow artwork, not the upstream swayimg logo.
 - Use golden proportions only where they improve composition and usability.
 - Open new image previews in the owner's graphical viewer and obtain approval
   before integrating them. The selected wallpaper and normalized mockup are approved.

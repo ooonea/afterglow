@@ -5,6 +5,9 @@
 - Wallpaper: generated with OpenAI image_gen from the included prompt, no image
   reference supplied to this selected generation. Depicts an adult original
   pilot and a mecha scene. Human selection and ImageMagick postprocessing.
+- `icons/swayimg.svg`: original SVG artwork authored with OpenAI Codex and
+  selected by the owner; CC BY 4.0. A custom theme icon, not the official swayimg
+  logo. This is the approved exception to the official-icon rule.
 - Application logos are not bundled or relicensed. Supply reviewed copies of the official icons from
   the installed applications or PWAs. Earlier custom/Papirus-based icon studies
   were superseded by the owner's requirement to preserve official app identity.

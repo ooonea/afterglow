@@ -1,4 +1,4 @@
-# Call with an explicit, version-controlled directory of official app icons.
+# Call with an explicit, version-controlled directory of app icons.
 # Filenames must match desktop-entry Icon keys. Inputs retain their own licenses.
 { pkgs, iconSources }:
 pkgs.runCommand "afterglow-icons"

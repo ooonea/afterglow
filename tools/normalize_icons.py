@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build an Afterglow icon theme from a directory of official application marks."""
+"""Build an Afterglow icon theme from a directory of application icons."""
 
 from pathlib import Path
 import re
@@ -34,7 +34,7 @@ for path in sorted(source.iterdir()):
     )
 
 (destination / "index.theme").write_text(
-    "[Icon Theme]\nName=Afterglow\nComment=Normalized official application icons\n"
+    "[Icon Theme]\nName=Afterglow\nComment=Normalized application icons\n"
     "Inherits=hicolor,Adwaita\nDirectories=108x108/apps\n\n"
     "[108x108/apps]\nSize=108\nType=Scalable\nMinSize=16\nMaxSize=108\nContext=Applications\n"
 )

@@ -1,7 +1,8 @@
 # Afterglow
 
 A warm, restrained desktop theme for Noctalia 5.1 and Umbriel: blue graphite
-surfaces, coral accents, peach light and consistently sized official application icons.
+surfaces, coral accents, peach light and consistently sized application icons.
+Official marks are preserved, with one approved custom icon for swayimg.
 
 The theme is being validated on a 1920×1080, 60 Hz desktop at display scale 1
 and UI/text scale 1.25. The native icon effects and live-scene blur are active and visually accepted on
@@ -11,6 +12,7 @@ the reference workstation; frame pacing has not been measured.
 
 - `palettes/Afterglow.json`: native Noctalia palette and terminal colors.
 - `wallpapers/cherry-pilot-1920x1080.png`: selected adult mecha-pilot illustration.
+- `icons/swayimg.svg`: original Afterglow icon for the image viewer, CC BY 4.0.
 - `examples/`: declarative appearance fragments, including Umbriel motion, colors
   and proportions; not complete session configurations.
 - `tools/`: palette contrast checks and build-time icon normalization.
@@ -35,7 +37,9 @@ Qt applications need a GTK platform theme to inherit the GTK font. Existing
 per-bar or per-widget font overrides must use the same family to stay consistent.
 
 For icons, keep reviewed official marks in a version-controlled source directory,
-with filenames matching the applications' desktop-entry `Icon` keys. Call
+with filenames matching the applications' desktop-entry `Icon` keys. Include the
+approved `icons/swayimg.svg` in that version-controlled source directory for the
+custom swayimg appearance. Call
 `examples/icons.nix` with `pkgs` and that directory as `iconSources`, then assign
 the resulting package to `gtk.iconTheme.package` and `Afterglow` to
 `gtk.iconTheme.name`. Include `pkgs.adwaita-icon-theme` in the environment for
