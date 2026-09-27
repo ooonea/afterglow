@@ -1,4 +1,4 @@
-# Appearance fragment for Noctalia 5.1; merge into your existing settings.
+# Requires the Noctalia rendering contributions listed in README.md.
 { wallpaper }:
 {
   theme = {
@@ -13,7 +13,18 @@
     speed = 1.0;
   };
   dock = {
+    enabled = true;
     icon_size = 54;
+    icon_saturation = 0.82;
+    icon_shadow = true;
+    main_axis_padding = 16;
+    cross_axis_padding = 8;
+    item_spacing = 6;
+    border_width = 1.0;
+    radius = 16;
+    margin_edge = 12;
+    shadow = true;
+    magnification = true;
     active_scale = 1.0;
     inactive_scale = 1.0;
     magnification_scale = 1.12;

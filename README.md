@@ -4,7 +4,8 @@ A warm, restrained desktop theme for Noctalia 5.1 and Umbriel: blue graphite
 surfaces, coral accents, peach light and consistently sized official application icons.
 
 The theme is being validated on a 1920×1080, 60 Hz desktop at display scale 1
-and UI/text scale 1.25. It is not yet a released or live-validated desktop.
+and UI/text scale 1.25. The base theme has been used on the reference workstation; the latest native
+icon effects and live-scene blur still await post-activation visual validation.
 
 ## Contents
 
@@ -20,7 +21,10 @@ your existing Noctalia settings, passing the Home Manager wallpaper path as
 `wallpaper`. Keep your existing TOML generation and native config validation;
 these fragments do not install a session or replace keybindings and authentication.
 Merge `builtins.fromJSON (builtins.readFile ./examples/umbriel-settings.json)`
-into the existing Umbriel settings in the same way. See `DESIGN.md` for the
+into the existing Umbriel settings in the same way. Append its `window_rule` and
+`layer_rule` entries to your existing lists rather than replacing application rules.
+Remove conflicting `blur_optimized = true` overrides: blur must sample the live
+scene behind each surface, not a cached wallpaper layer. See `DESIGN.md` for the
 intended geometry, timing and outstanding runtime review.
 
 For icons, keep reviewed official marks in a version-controlled source directory,
@@ -34,6 +38,22 @@ script writes into the home directory. Logos remain separately licensed inputs.
 The wallpaper was generated with OpenAI image_gen, then resampled from 1672×941
 with ImageMagick Lanczos and a centered extent to exactly 1920×1080. It is not a
 native Full HD generation. The generation prompt is included beside the image.
+
+## Native rendering requirements
+
+The updated Noctalia example requires these contributions in addition to 5.1.0:
+
+- [#4599](https://github.com/noctalia-dev/noctalia/pull/4599): apply image opacity once (`f89358261`).
+- [#4600](https://github.com/noctalia-dev/noctalia/pull/4600): icon saturation (`9f75f32cc`).
+- [#4601](https://github.com/noctalia-dev/noctalia/pull/4601): tinted mask coverage (`7a8c9b435`).
+- [#4603](https://github.com/noctalia-dev/noctalia/pull/4603): alpha-shaped icon shadows, including review and lint corrections (`a2bebdb66`).
+
+These are submitted contributions, not a promise that stock Noctalia 5.1.0
+supports the new settings. Use a package containing them; #4603 already carries
+#4601 as its prerequisite. They do not require this workstation's hardware.
+Umbriel's live-scene blur is existing functionality and needs no source patch.
+It costs more rendering work than background-only blur; frame pacing remains a
+runtime validation item.
 
 ## Design
 

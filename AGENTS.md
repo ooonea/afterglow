@@ -10,3 +10,6 @@
   before integrating them. The selected wallpaper and normalized mockup are approved.
 - Do not bundle or relicense third-party application logos or Dracula PRO assets.
 - Follow the workspace publication protocol before creating the public repository.
+- Blur must follow the live scene behind each surface, including moving content;
+  do not substitute a static or background-only wallpaper blur. Caching unchanged
+  pixels is acceptable only when scene changes invalidate the affected result.

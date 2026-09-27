@@ -11,7 +11,10 @@ integer dimensions instead of forcing irrational proportions everywhere.
 
 Official app icons fit an 88-pixel visible envelope on a 108-pixel canvas.
 At the dock's 54-pixel size this becomes 44 pixels. Active and inactive icons
-share scale 1.0; hover peaks at 1.12. Brands retain their shapes and colors.
+share scale 1.0; hover peaks at 1.12. Original icon pixels and shapes are preserved;
+the renderer applies saturation 0.82 and a palette-colored alpha-shaped shadow.
+The shadow uses one-third opacity, Gaussian sigma 2 logical pixels and a 2-pixel
+downward offset.
 No individual tiles or custom replacement symbols are used.
 
 Umbriel motion uses cubic ease-out: opening 167 ms at scale 0.97, closing
@@ -22,7 +25,10 @@ animation system at speed 1.0. Compositor and shell motion can be disabled using
 their native animation.enabled settings.
 
 The HTML mockup is an artistic reference. Native panel geometry, blur and
-elevation differ from browser rendering. Its per-icon CSS filter is not part of
-the native icon package. Post-activation review must cover launcher, control
+elevation differ from browser rendering. Icon effects are native renderer
+operations, not baked into the icon package. Blur samples the current composed
+scene behind each surface, including moving windows and video. Unchanged pixels
+may be cached; changes underneath must invalidate the affected blur. Post-activation
+review must cover launcher, clipboard, control
 center, notifications, lock screen, quick repeated input and motion interruption.
 No runtime visual or frame-pacing success is claimed before that review.
