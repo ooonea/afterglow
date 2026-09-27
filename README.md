@@ -45,6 +45,9 @@ the resulting package to `gtk.iconTheme.package` and `Afterglow` to
 `gtk.iconTheme.name`. Include `pkgs.adwaita-icon-theme` in the environment for
 fallbacks. ImageMagick normalization happens during the Nix build; no runtime
 script writes into the home directory. Logos remain separately licensed inputs.
+When using the NixOS Noctalia service, include the icon theme package in
+`systemd.user.services.noctalia.restartTriggers` so an icon-only generation
+refreshes the shell's cached icon paths.
 
 The wallpaper was generated with OpenAI image_gen, then resampled from 1672×941
 with ImageMagick Lanczos and a centered extent to exactly 1920×1080. It is not a
