@@ -9,6 +9,14 @@ The approved composition uses 38.2% / 61.8% divisions. Umbriel window extent
 presets are 0.382, 0.5 and 0.618. Spacing, controls and typography use native
 integer dimensions instead of forcing irrational proportions everywhere.
 
+The selected typography pairs Source Sans 3's humanist forms with Lilex Medium
+at 17 pt in the terminal. GTK uses Source Sans 3 at 11 pt before text scaling;
+Noctalia keeps its native size hierarchy at UI scale 1.25. Bar labels use medium
+weight. Terminal bold remains available for emphasis. Source Sans 3 has a lower
+x-height than Inter at the same nominal size; the selected comparison preserves
+native geometry rather than enlarging every control to equalize that metric.
+The type study is approved; deployment still needs a live readability check.
+
 Official app icons fit an 88-pixel visible envelope on a 108-pixel canvas.
 At the dock's 54-pixel size this becomes 44 pixels. Active and inactive icons
 share scale 1.0; hover peaks at 1.12. Original icon pixels and shapes are preserved;

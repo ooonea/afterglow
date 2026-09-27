@@ -8,6 +8,8 @@
   };
   wallpaper.default.path = wallpaper;
   lockscreen.wallpaper = wallpaper;
+  accessibility.ui_scale = 1.25;
+  shell.font_family = "Source Sans 3";
   shell.animation = {
     enabled = true;
     speed = 1.0;

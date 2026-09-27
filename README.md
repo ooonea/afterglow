@@ -4,8 +4,8 @@ A warm, restrained desktop theme for Noctalia 5.1 and Umbriel: blue graphite
 surfaces, coral accents, peach light and consistently sized official application icons.
 
 The theme is being validated on a 1920×1080, 60 Hz desktop at display scale 1
-and UI/text scale 1.25. The base theme has been used on the reference workstation; the latest native
-icon effects and live-scene blur still await post-activation visual validation.
+and UI/text scale 1.25. The native icon effects and live-scene blur are active and visually accepted on
+the reference workstation; frame pacing has not been measured.
 
 ## Contents
 
@@ -16,7 +16,7 @@ icon effects and live-scene blur still await post-activation visual validation.
 - `tools/`: palette contrast checks and build-time icon normalization.
 
 Integration is declarative. Import `examples/home-manager.nix` for the palette,
-wallpaper and terminal appearance. Merge `examples/noctalia-settings.nix` into
+wallpaper, typography and terminal appearance. Merge `examples/noctalia-settings.nix` into
 your existing Noctalia settings, passing the Home Manager wallpaper path as
 `wallpaper`. Keep your existing TOML generation and native config validation;
 these fragments do not install a session or replace keybindings and authentication.
@@ -26,6 +26,13 @@ into the existing Umbriel settings in the same way. Append its `window_rule` and
 Remove conflicting `blur_optimized = true` overrides: blur must sample the live
 scene behind each surface, not a cached wallpaper layer. See `DESIGN.md` for the
 intended geometry, timing and outstanding runtime review.
+
+Typography uses Source Sans 3 for the interface and Lilex Medium at 17 pt for
+Kitty. The example sets GTK text scale and Noctalia UI scale to 1.25. For a system
+greeter, also install `pkgs.source-sans` through NixOS `fonts.packages` and set its
+native font family; the greeter cannot use fonts installed only in a user profile.
+Qt applications need a GTK platform theme to inherit the GTK font. Existing
+per-bar or per-widget font overrides must use the same family to stay consistent.
 
 For icons, keep reviewed official marks in a version-controlled source directory,
 with filenames matching the applications' desktop-entry `Icon` keys. Call
